@@ -1,0 +1,3 @@
+Gyro Period(ms)¡G	387014	A¡G	0.000000	B¡G	0.000000
+Gyro Period(ms)¡G	49	A¡G	0.000000	B¡G	0.000000
+Gyro Period(ms)¡G	2854	A¡G	0.000000	B¡G	0.000000

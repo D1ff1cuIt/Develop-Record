@@ -1,0 +1,7 @@
+MPUXX50.c:17:9:MPU_begin	3
+MPUXX50.c:53:6:MPU_writeAccFullScaleRange	5
+MPUXX50.c:92:6:MPU_writeGyroFullScaleRange	5
+MPUXX50.c:130:6:MPU_readRawData	1
+MPUXX50.c:151:6:MPU_calibrateGyro	3
+MPUXX50.c:182:6:MPU_readProcessedData	1
+MPUXX50.c:205:6:MPU_calcAttitude	1
