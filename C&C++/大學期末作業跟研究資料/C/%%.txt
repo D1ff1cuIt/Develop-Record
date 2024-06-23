@@ -1,0 +1,81 @@
+#include <iostream>
+#include <iomanip>
+#include <stdlib.h>
+#include <conio.h>
+#include <windows.h>
+
+using namespace std;
+typedef struct record
+{
+	int score;
+	struct record *next;
+}	node_type;
+
+class single_link_list 
+{
+	private :
+		node_type *ptr;
+		node_type *head;
+		node_type *tail;
+		node_type *current;
+		node_type *prev;
+	public :
+		 single_link_list ();
+		 void insert_f(int input);
+		 void display_f();
+	
+	
+};
+single_link_list::single_link_list()
+{
+	head = new node_type;
+	head->next = NULL;
+	tail = NULL; 
+}
+
+void single_link_list::insert_f(int input)
+{
+	char s_tmep[4];
+	ptr = new node_type;
+	ptr->score = input;
+	current = new node_type;
+	prev = head ;
+	current = head->next;
+	while ((current != NULL) && (current->score > ptr->score))
+	{
+		prev = current ;
+		current = current->next;
+		
+	}
+	ptr->next = current;
+	prev->next = ptr;
+}
+
+void single_link_list::display_f(void)
+{
+	int count = 0 ;
+	if (head->next == NULL)
+		cout <<"no record\n" << endl ;
+	else
+	{
+		current=head->next;
+		while(current !=NULL)
+		{
+			cout << current->score << "\n" ;
+			count++;
+			current = current->next;
+		}
+	}	
+}
+
+int main()
+{
+	single_link_list obj;
+	obj.display_f();
+	obj.insert_f(20);
+	obj.insert_f(50);
+	obj.insert_f(30);
+	obj.insert_f(80);
+	obj.insert_f(40);
+	obj.display_f();
+}

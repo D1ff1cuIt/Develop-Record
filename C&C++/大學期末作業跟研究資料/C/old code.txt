@@ -1,0 +1,598 @@
+package com.Mcdonald;
+
+
+import java.sql.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.AbstractButton;
+import javax.swing.ButtonModel;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+
+public class Mcdonaldisgood  {
+
+
+    String food = "", drink = "",snack = "",combo="";
+    Integer food_idx = 0,drink_idx = 0 ,snack_idx = 0,combo_idx = 0;
+    Integer s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12;
+    Integer food_c = 0 , drink_c = 0 , snack_c = 0 , combo_c = 0;
+    String all ;
+    Double all_c ;
+    boolean corn = false; //大杯玉米湯判斷
+    boolean sweet = false; //甜心卡判斷
+    boolean nugget4 = false; //麥克雞塊(4)選單判斷
+    boolean doubledrink = false; //單點兩杯大杯飲料判斷
+    boolean hoticetea = false; //熱紅茶加點判斷
+    public static int[] food_cost = {0 , 72, 99, 62, 110, 90
+            , 100, 60, 49, 82, 72, 44, 52, 69, 44, 0};
+    public static int[] snack_cost = {0 , 32, 42, 45, 55, 55, 49, 55, 55, 45, 45, 32, 33};
+    public static int[] drinks_cost = {0 , 40, 33, 28, 45, 52, 40, 0};
+    public static int[] combo_cost = {0 , 55 , 55, 65, 68, 79 , 0};
+
+    private JButton button1;
+    private JPanel MCDisGOOD;
+    private JLabel label1;
+    private JCheckBox 有甜心卡CheckBox;
+    private JTextField result;
+    private JTextField Calculation;
+    private JLabel drink_label;
+    public  JComboBox food_combo;
+    public JComboBox Drinks_combo;
+    public JComboBox combo_combox;
+    private JLabel snack_label;
+    private JCheckBox 小薯CheckBox;
+    private JCheckBox 中薯CheckBox;
+    private JCheckBox 麥脆雞翅CheckBox;
+    private JCheckBox OREO冰炫風CheckBox;
+    private JCheckBox 搖搖樂雞腿排CheckBox;
+    private JCheckBox 搖搖樂雞球CheckBox;
+    private JCheckBox 大薯CheckBox;
+    private JCheckBox 麥脆雞腿CheckBox;
+    private JCheckBox 勁辣香雞翅CheckBox;
+    private JCheckBox 酥嫩雞翅CheckBox;
+    private JCheckBox 蘋果派CheckBox;
+    private JCheckBox 小杯玉米湯CheckBox;
+    private JLabel food_label;
+    private JTextField advice;
+    private JButton 復歸按鈕Button;
+
+//    private JTextField textField1;
+
+
+    public static void main(String[] args) {
+
+        //new Mcdonaldisgood();
+        JFrame frame = new JFrame("Mcdonald is good");
+        frame.setContentPane(new Mcdonaldisgood().MCDisGOOD);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+//        JComboBox Food_combobox = new JComboBox(food);
+        frame.setSize(800, 600);
+
+    }
+
+
+
+    public Mcdonaldisgood() {
+
+//        food_combo = new JComboBox();
+        food_combo.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                JComboBox c = (JComboBox) e.getSource();
+//                System.out.println("index: " + c.getSelectedIndex());
+//                System.out.println("item: " + c.getSelectedItem());
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    food += (c.getSelectedItem() + " ");
+                    food_c += food_cost[c.getSelectedIndex()];
+                    if( c.getSelectedIndex() == 8 || c.getSelectedIndex() == 15)
+                    {
+                        combo_combox.setEnabled(false);
+                        combo_idx = 6;
+                    }
+                    else
+                    {
+                        combo_combox.setEnabled(true);
+                    }
+                    food_idx += c.getSelectedIndex();
+                    Calculation.setText(food + combo + drink + snack);
+                    System.out.print(food_idx);
+                }
+
+                if(c.getSelectedIndex() == 8)
+                {
+                    nugget4 = true;
+                }
+            }
+        });
+
+        Drinks_combo.addItemListener(new ItemListener() {
+            @Override
+
+            public void itemStateChanged(ItemEvent e) {
+
+                JComboBox d = (JComboBox) e.getSource();
+                if (e.getStateChange() == ItemEvent.SELECTED)
+                {
+                    System.out.println("index: " + d.getSelectedIndex());
+                    System.out.println("item: " + d.getSelectedItem());
+
+                    drink +=( "+"+d.getSelectedItem());
+                    drink_c += drinks_cost[d.getSelectedIndex()];
+                    Calculation.setText(food + combo + drink + snack);
+                    drink_idx += d.getSelectedIndex();
+                    System.out.println(drink_idx);
+
+                    if (d.getSelectedIndex() == 2)
+                    {
+                        hoticetea = true;
+                    }
+
+                    if (d.getSelectedIndex() == 5)
+                    {
+                        corn = true;
+                    }
+
+
+                    if (d.getSelectedIndex() == 6)
+                    {
+                        doubledrink = true;
+                    }
+                    else
+                    {
+                        doubledrink = false;
+                    }
+
+                }
+//                else {
+//                    drink = "";
+//                }
+
+
+
+
+            }
+        });
+
+        combo_combox.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                JComboBox co = (JComboBox) e.getSource();
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    combo = ("+" + co.getSelectedItem());
+                    combo_c = combo_cost[co.getSelectedIndex()];
+                    combo_idx = co.getSelectedIndex();
+                    Calculation.setText(food + combo + snack + drink );
+                    System.out.println(combo_c);
+                }
+            }
+        });
+        復歸按鈕Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Calculation.setText("");
+                result.setText("");
+                advice.setText("");
+                food_combo.setSelectedItem("變更選項");
+                Drinks_combo.setSelectedItem("變更選項");
+                combo_combox.setSelectedItem("變更選項");
+                result.setText("甜心卡搭配價格");
+                food = "";
+                drink = "";
+                snack = "";
+                food_c = 0;
+                drink_c = 0;
+                snack_c = 0;
+                combo_c = 0;
+                food_idx = 0;
+                drink_idx = 0;
+                snack_idx = 0;
+                小薯CheckBox.setSelected(false);
+                中薯CheckBox.setSelected(false);
+                麥脆雞翅CheckBox.setSelected(false);
+                OREO冰炫風CheckBox.setSelected(false);
+                搖搖樂雞腿排CheckBox.setSelected(false);
+                搖搖樂雞球CheckBox.setSelected(false);
+                大薯CheckBox.setSelected(false);
+                麥脆雞腿CheckBox.setSelected(false);
+                勁辣香雞翅CheckBox.setSelected(false);
+                酥嫩雞翅CheckBox.setSelected(false);
+                蘋果派CheckBox.setSelected(false);
+                小杯玉米湯CheckBox.setSelected(false);
+                有甜心卡CheckBox.setSelected(false);
+                combo_combox.setEnabled(true);
+                corn = false;
+                sweet = false;
+                doubledrink = false;
+                hoticetea = false;
+                button1.setEnabled(true);
+
+            }
+        });
+
+
+
+        button1.addActionListener(new ActionListener() {
+            @Override
+
+            public void actionPerformed(ActionEvent e) {
+//                JOptionPane.showMessageDialog(null, "Hello World");
+
+
+                all_c = 0.0;
+                snack_c = 0;
+                snack = "";
+                if (小薯CheckBox.isSelected()) {
+                    snack += "+小薯";
+                    snack_c += snack_cost[1];
+                    s1 = 1;
+                } else s1 = 0;
+                if (中薯CheckBox.isSelected()) {
+                    snack += "+中薯";
+                    snack_c += snack_cost[2];
+                    s2 = 2;
+                } else s2 = 0;
+                if (麥脆雞翅CheckBox.isSelected()) {
+                    snack += "+麥脆雞翅";
+                    snack_c += snack_cost[3];
+                    s3 = 3;
+                } else s3 = 0;
+                if (OREO冰炫風CheckBox.isSelected()) {
+                    snack += "+OREO冰炫風";
+                    snack_c += snack_cost[4];
+                    s4 = 4;
+                } else s4 = 0;
+                if (搖搖樂雞腿排CheckBox.isSelected()) {
+                    snack += "+搖搖樂雞腿排";
+                    snack_c += snack_cost[5];
+                    s5 = 5;
+                } else s5 = 0;
+                if (搖搖樂雞球CheckBox.isSelected()) {
+                    snack += "+搖搖樂雞球";
+                    snack_c += snack_cost[6];
+                    s6 = 6;
+                } else s6 = 0;
+                if (大薯CheckBox.isSelected()) {
+                    snack += "+大薯";
+                    snack_c += snack_cost[7];
+                    s7 = 7;
+                } else s7 = 0;
+                if (麥脆雞腿CheckBox.isSelected()) {
+                    snack += "+麥脆雞腿";
+                    snack_c += snack_cost[8];
+                    s8 = 8;
+                } else s8 = 0;
+                if (勁辣香雞翅CheckBox.isSelected()) {
+                    snack += "+勁辣香雞翅";
+                    snack_c += snack_cost[9];
+                    s9 = 9;
+                } else s9 = 0;
+                if (酥嫩雞翅CheckBox.isSelected()) {
+                    snack += "+酥嫩雞翅";
+                    snack_c += snack_cost[10];
+                    s10 = 10;
+                } else s10 = 0;
+                if (蘋果派CheckBox.isSelected()) {
+                    snack += "+蘋果派";
+                    snack_c += snack_cost[11];
+                    s11 = 11;
+                } else s11 = 0;
+                if (小杯玉米湯CheckBox.isSelected()) {
+                    snack += "+小杯玉米湯";
+                    snack_c += snack_cost[12];
+                    s12 = 12;
+                } else s12 = 0;
+                if (有甜心卡CheckBox.isSelected()) {
+                    sweet = true;
+                }
+
+
+//                if (有甜心卡CheckBox.isSelected()) {
+//                    all_c = Double.valueOf((food_c+ snack_c +drink_c ));
+//                    all_c = (all_c* 0.7);
+//                    if (drink == "大杯奶茶(冷熱皆可價錢一樣)"  ){
+//
+//                    }
+//
+//                }else all_c = Double.valueOf((food_c+ snack_c +drink_c ));
+
+
+                all = (food + combo + drink + snack);
+                Calculation.setText(all);
+                snack_idx = s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + s10 + s11 + s12;
+                if (sweet) {
+                    if (food_idx == 15 && corn == false && combo_idx == 6 && (drink_idx == 5 || drink_idx == 6)) { //點大冰奶搭配大杯飲料 or 大冰奶搭配小奶茶OR熱紅茶
+                        if (drink_idx == 5) {
+                            drink_c = 45;
+                            advice.setText("建議使用甜心卡點餐 A選擇大冰奶 B選擇大杯飲料");
+                        }
+                        if (drink_idx == 6) {
+                            advice.setText("建議使用甜心卡點餐 A選擇大冰奶 B選擇小奶茶OR熱紅茶");
+                            drink_c = 45;
+                        }
+
+                    }
+                    if ((food_idx == 15) && corn == true && combo_idx == 6 && (drink_idx == 6 || drink_idx == 7 || (drink_idx == 5 && snack_idx == 1))) //點大杯玉米湯搭配大杯飲料 or 大玉米湯搭配小奶茶OR熱紅茶 or 大杯玉米湯搭配小薯
+                    {
+                        if (drink_idx == 6) {
+                            advice.setText("建議使用甜心卡點餐 A選擇大杯玉米湯 B選擇大杯飲料");
+                            drink_c = 52;
+
+                        }
+                        if (drink_idx == 7) {
+                            drink_c = 52;
+                            advice.setText("建議使用甜心卡點餐 A選擇大杯玉米湯 B選擇小奶茶OR熱紅茶");
+                        }
+                        if (drink_idx == 5 && snack_idx == 1) {
+                            drink_c = 52;
+                            advice.setText("建議使用甜心卡點餐 A選擇大杯玉米湯 B選擇小薯");
+                        }
+
+                    }
+                    if (food_idx == 15 && combo_idx == 6 && ((snack_idx == 4 && drink_idx == 1) || (snack_idx == 4 && drink_idx == 2) || (snack_idx == 5 && drink_idx == 7))) //選擇OREO冰炫風搭配大杯飲料 or 選擇OREO冰炫風搭配小奶茶OR熱紅茶 or 選擇OREO冰炫風搭配小薯
+                    {
+                        if (snack_idx == 4 && drink_idx == 1 ) {
+                            snack_c = 55;
+                            drink_c = 0;
+                            advice.setText("建議使用甜心卡點餐 A選擇OREO冰炫風 B選擇大杯飲料");
+                        }
+                        if (drink_idx == 2 && snack_idx == 4) {
+                            snack_c = 55;
+                            drink_c = 0;
+                            advice.setText("建議使用甜心卡點餐 A選擇OREO冰炫風 B選擇小奶茶OR熱紅茶");
+                        }
+                        if (snack_idx == 5 && drink_idx == 7) {
+                            snack_c = 55;
+                            advice.setText("建議使用甜心卡點餐 A選擇冰炫風 B選擇小薯");
+                        }
+                    }
+                    if (food_idx == 15 && combo_idx == 6 && (drink_idx == 2) || (drink_idx == 3) || (drink_idx == 1 && snack_idx == 1)) //選擇大杯飲料搭配大杯飲料 or 選擇大杯飲料搭配小奶茶OR熱紅茶 or 選擇大杯飲料搭配小薯
+                    {
+                        if (drink_idx == 2 && snack_idx == 0) {
+                            drink_c = 40;
+                            advice.setText("建議使用甜心卡點餐 A選擇大杯飲料 B選擇大杯飲料");
+                        }
+                        if (drink_idx == 3) {
+                            drink_c = 40;
+                            advice.setText("建議使用甜心卡點餐 A選擇大杯飲料 B選擇小奶茶OR熱紅茶");
+                        }
+                        if (drink_idx == 1 && snack_idx == 1) {
+                            drink_c = 40;
+                            snack_c = 0;
+                            advice.setText("建議使用甜心卡點餐 A選擇大杯飲料 B選擇小薯");
+                            System.out.println(drink_idx);
+                        }
+                    }
+                    if (food_idx == 15 && combo_idx == 6 && (drink_idx == 1 && snack_idx == 7) || (drink_idx == 2 && snack_idx == 7) || (snack_idx == 8 && drink_idx == 7)) //選擇大薯搭配大杯飲料 or 選擇大薯搭配小奶茶OR熱紅茶 or 選擇大薯搭配小薯
+                    {
+                        if (drink_idx == 1 && snack_idx == 7 ) {
+                            snack_c = 55;
+                            drink_c = 0;
+                            advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料");
+                        }
+                        if (drink_idx == 2 && snack_idx == 7) {
+                            snack_c = 55;
+                            drink_c = 0;
+                            advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇小奶茶OR熱紅茶");
+                        }
+                        if (snack_idx == 8 && drink_idx == 7) {
+                            snack_c = 55;
+                            advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇小薯");
+                            System.out.println(drink_idx);
+                        }
+                    }
+                    if ((food_idx == 6 && combo_idx == 6 && drink_idx == 1) || (drink_idx == 2 && food_idx == 6) || (food_idx == 6 && snack_idx == 1 && drink_idx == 7)) //選擇麥克雞塊(10)搭配大杯飲料 or 選擇麥克雞塊(10)搭配小奶茶OR熱紅茶 or 選擇麥克雞塊(10)搭配小薯
+                    {
+                        if (food_idx == 6 && drink_idx == 1) {
+                            food_c = 100;
+                            drink_c = 0;
+                            System.out.println(snack_c);
+                            advice.setText("建議使用甜心卡點餐 A選擇麥克雞塊(10) B選擇大杯飲料");
+                        }
+                        if (drink_idx == 2 && food_idx == 6) {
+                            food_c = 100;
+                            drink_c = 0;
+                            advice.setText("建議使用甜心卡點餐 A選擇麥克雞塊(10) B選擇小奶茶OR熱紅茶");
+                        }
+                        if (food_idx == 6 && snack_idx == 1 && drink_idx == 7) {
+                            food_c = 100;
+                            snack_c = 0;
+                            advice.setText("建議使用甜心卡點餐 A選擇麥克雞塊(10) B選擇小薯");
+                            System.out.println(drink_idx);
+                        }
+                    }
+                    if ((food_idx == 7 && drink_idx == 1 && combo_idx == 6) || (drink_idx == 2 && food_idx == 7 && combo_idx == 6) || (food_idx == 7 && snack_idx == 1 && drink_idx == 7 && combo_idx == 6)) //選擇麥克雞塊(6)搭配大杯飲料 or 選擇麥克雞塊(6)搭配小奶茶OR熱紅茶 or 選擇麥克雞塊(6)搭配小薯
+                    {
+                        if (food_idx == 7 && drink_idx == 1) {
+                            food_c = 60;
+                            drink_c = 0;
+                            advice.setText("建議使用甜心卡點餐 A選擇麥克雞塊(6) B選擇大杯飲料");
+                        }
+                        if (drink_idx == 2 && food_idx == 7) {
+                            food_c = 60;
+                            drink_c = 0;
+                            advice.setText("建議使用甜心卡點餐 A選擇麥克雞塊(6) B選擇小奶茶OR熱紅茶");
+                        }
+                        if (food_idx == 7 && snack_idx == 1 && drink_idx == 7) {
+                            food_c = 60;
+                            snack_c = 0;
+                            advice.setText("建議使用甜心卡點餐 A選擇麥克雞塊(6) B選擇小薯");
+                            System.out.println(drink_idx);
+                        }
+                    }
+                    if ((food_idx == 8 && drink_idx == 1 && combo_idx == 6) || (drink_idx == 2 && combo_idx == 6 && food_idx == 8 && doubledrink == false) || (drink_idx == 6 && food_idx == 8 && combo_idx == 6 && doubledrink == true) || (food_idx == 8 && snack_idx == 1 && drink_idx == 7 && combo_idx == 6)) //選擇麥克雞塊(4)搭配大杯飲料 or 選擇麥克雞塊(4)搭配小奶茶OR熱紅茶 or 選擇麥克雞塊(4)搭配小薯
+                    {
+                        if (food_idx == 8 && drink_idx == 1 && combo_idx == 6) {
+                            food_c = 49;
+                            drink_c = 0;
+                            advice.setText("建議使用甜心卡點餐 A選擇麥克雞塊(4) B選擇大杯飲料");
+                        }
+                        if (drink_idx == 2 && food_idx == 8 && combo_idx == 6 && doubledrink == false) {
+                            food_c = 49;
+                            drink_c = 0;
+                            advice.setText("建議使用甜心卡點餐 A選擇麥克雞塊(4) B選擇小奶茶OR熱紅茶");
+                        }
+                        if (drink_idx == 6 && food_idx == 8 && combo_idx == 6 && doubledrink == true)
+                        {
+                            drink_c = 55;
+                            advice.setText("建議使用甜心卡點餐 A選擇大杯飲料 B選擇大杯飲料 + 單點麥克雞塊(4)");
+                        }
+                        if (food_idx == 8 && snack_idx == 1 && drink_idx == 7 && combo_idx == 6) {
+                            food_c = 49;
+                            snack_c = 0 ;
+                            advice.setText("建議使用甜心卡點餐 A選擇麥克雞塊(4) B選擇小薯");
+                            System.out.println(drink_idx);
+                        }
+                    }
+                    if(combo_idx == 1 )
+                    {
+                        if (food_c != 0 && nugget4 == false && food_c != 15 &&  combo_idx == 1  && drink_idx != 7 ) //除了麥克雞塊(4)、變更選項、不選擇、以外的主餐搭配經典特餐並且有甜心卡
+                        {
+                            if (corn == true)
+                            {
+                                combo_c = 55;
+                                drink_c = 52;
+                                advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+可以使用甜心卡單點大杯玉米湯搭配其他優惠");
+                            }
+                            else
+                            {
+                                if (snack_idx == 4)
+                                {
+                                    advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+可以使用甜心卡單點OREO冰炫風搭配其他優惠");
+                                }
+                                else
+                                {
+                                    advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+單點" + Drinks_combo.getSelectedItem() + snack );
+                                }
+
+                            }
+
+
+                        }
+                        else
+                        {
+                            advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + snack );
+                        }
+                        if(food_c != 0 && corn == false && (nugget4 == true && food_idx != 8) && food_c != 15 && sweet == true && doubledrink == false )//經典套餐額外單點麥克雞塊4個推薦
+                        {
+                            advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "如果要吃麥克雞塊4個，可以用1+1多一元多一個小杯玉米湯，或是使用甜心卡搭配其他優惠");
+                        }
+                        if(corn == false && nugget4 == false && sweet == true && food_c != 0 && food_c != 15  && doubledrink == true ) // 套餐額外單點兩杯大杯飲料
+                        {
+                            advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+使用甜心卡單點大杯飲料會多一杯");
+                        }
+                        if(corn == false && nugget4 == false && sweet == true && food_c != 0 && food_c != 15 && ( (drink_idx == 3 && hoticetea == true) || (drink_idx == 1 && snack_idx == 1 )) ) // 套餐額外單點兩杯大杯飲料
+                        {
+                            if (drink_idx == 3)
+                            {
+                                advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+使用甜心卡單點大杯飲料搭配小奶茶OR熱紅茶");
+                            }
+
+                            if (drink_idx == 1 && snack_idx == 1)
+                            {
+                                advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+使用甜心卡單點大杯飲料搭配小薯");
+                            }
+                        }
+                        if (corn == false && nugget4 == false && sweet == true && food_c != 0 && food_c != 15 && snack_idx == 0 && drink_idx == 1 && doubledrink == false ) // 套餐額外單點大杯飲料建議
+                        {
+                            advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+可以使用甜心卡單點大杯飲料搭配其他優惠");
+                        }
+                        if (corn == false && nugget4 == false && sweet == true && food_c != 0 && food_c != 15 && doubledrink == false && (drink_idx == 5 || (drink_idx == 6 && hoticetea == true) || (drink_idx == 4 && snack_idx == 1)))  //套餐額外單點大冰奶甜心卡搭配
+                        {
+                            if (drink_idx == 5)
+                            {
+                                advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+可以使用甜心卡單點大冰奶搭配大杯飲料");
+                            }
+
+                            if (drink_idx == 6)
+                            {
+                                advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+可以使用甜心卡單點大冰奶搭配小奶茶OR熱紅茶");
+                            }
+
+                            if (drink_idx == 4 && snack_idx == 1)
+                            {
+                                advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+可以使用甜心卡單點大冰奶搭配小薯");
+                            }
+                        }
+                        if (corn == false && nugget4 == false && food_c != 0 && food_c != 15 && drink_idx == 2 && doubledrink == false) // 套餐額外單點大冰奶建議
+                        {
+                            advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+可以使用甜心卡單點大冰奶搭配其他優惠");
+                        }
+                        if (corn == true && nugget4 == false && food_c != 0 && food_c != 15 && doubledrink == false && (drink_idx == 6 || (drink_idx == 7 && hoticetea == true) || (drink_idx == 5 && snack_idx == 1) )) //套餐加點玉米湯優惠
+                        {
+                            if (drink_idx == 6) {
+                                advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+可以使用甜心卡單點大杯玉米湯搭配大杯飲料");
+                            }
+
+                            if (drink_idx == 7 && hoticetea == true) {
+                                drink_c = 52;
+                                advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+可以使用甜心卡單點大杯玉米湯搭配小奶茶OR熱紅茶");
+                            }
+
+                            if (drink_idx == 5 && snack_idx == 1) {
+                                snack_c = 0;
+                                advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+可以使用甜心卡單點大杯玉米湯搭配小薯");
+                            }
+
+
+                        }
+                        if (corn == false && nugget4 == false && doubledrink == false && (snack_idx == 4 && drink_idx == 1 || (drink_idx == 2 && snack_idx == 4 && hoticetea == true) || (snack_idx == 5 && drink_idx == 7) )) //套餐加點OREO冰炫風優惠
+                        {
+                            if (snack_idx == 4 && drink_idx == 1) {
+                                drink_c = 0;
+                                advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+可以使用甜心卡單點OREO冰炫風搭配大杯飲料");
+                            }
+
+                            if (drink_idx == 2 && snack_idx == 4 && hoticetea == true) {
+                                snack_c = 55;
+                                drink_c = 0;
+                                advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+可以使用甜心卡單點OREO冰炫風搭配小奶茶OR熱紅茶");
+                            }
+
+                            if (snack_idx == 5 && drink_idx == 7) {
+                                snack_c = 55;
+                                advice.setText("建議使用甜心卡點餐 A選擇大薯 B選擇大杯飲料" + "+單點" + food_combo.getSelectedItem() + "+可以使用甜心卡單點OREO冰炫風搭配小薯");
+                            }
+                        } 
+                    }
+                }
+                all_c = Double.valueOf((food_c + snack_c + drink_c + combo_c));
+                result.setText(String.valueOf(all_c));
+                button1.setEnabled(false);
+            }
+        });
+
+
+
+//    @Override
+//    public void itemStateChanged(ItemEvent e) {
+//        JComboBox c = (JComboBox) e.getSource();
+//        System.out.println("index: " + c.getSelectedIndex());
+//        System.out.println("item: " + c.getSelectedItem());
+//        if (c.getSelectedIndex() == 1) {
+//            textField1.setText("123");
+//        }
+//        if (c.getSelectedItem() == "two") {
+//            c.remove("one");
+//        }
+//        if (c.getSelectedItem() == "three") {
+//            c.remove(1);
+//        }
+//        if (c.getSelectedItem() == "remove all") {
+//            c.removeAll();
+//        }
+
+//    }
+
+    }
+}
