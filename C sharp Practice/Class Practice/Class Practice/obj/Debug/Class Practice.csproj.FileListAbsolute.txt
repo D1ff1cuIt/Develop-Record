@@ -1,0 +1,20 @@
+C:\Users\user\source\repos\Class Practice\Class Practice\bin\Debug\Class Practice.exe.config
+C:\Users\user\source\repos\Class Practice\Class Practice\bin\Debug\Class Practice.exe
+C:\Users\user\source\repos\Class Practice\Class Practice\bin\Debug\Class Practice.pdb
+C:\Users\user\source\repos\Class Practice\Class Practice\obj\Debug\Class Practice.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Class Practice\Class Practice\obj\Debug\Class_Practice.Form1.resources
+C:\Users\user\source\repos\Class Practice\Class Practice\obj\Debug\Class_Practice.Properties.Resources.resources
+C:\Users\user\source\repos\Class Practice\Class Practice\obj\Debug\Class Practice.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Class Practice\Class Practice\obj\Debug\Class Practice.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Class Practice\Class Practice\obj\Debug\Class Practice.exe
+C:\Users\user\source\repos\Class Practice\Class Practice\obj\Debug\Class Practice.pdb
+C:\Users\user\Desktop\程式\C sharp Practice\Class Practice\Class Practice\bin\Debug\Class Practice.exe.config
+C:\Users\user\Desktop\程式\C sharp Practice\Class Practice\Class Practice\bin\Debug\Class Practice.exe
+C:\Users\user\Desktop\程式\C sharp Practice\Class Practice\Class Practice\bin\Debug\Class Practice.pdb
+C:\Users\user\Desktop\程式\C sharp Practice\Class Practice\Class Practice\obj\Debug\Class Practice.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\程式\C sharp Practice\Class Practice\Class Practice\obj\Debug\Class_Practice.Form1.resources
+C:\Users\user\Desktop\程式\C sharp Practice\Class Practice\Class Practice\obj\Debug\Class_Practice.Properties.Resources.resources
+C:\Users\user\Desktop\程式\C sharp Practice\Class Practice\Class Practice\obj\Debug\Class Practice.csproj.GenerateResource.cache
+C:\Users\user\Desktop\程式\C sharp Practice\Class Practice\Class Practice\obj\Debug\Class Practice.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\程式\C sharp Practice\Class Practice\Class Practice\obj\Debug\Class Practice.exe
+C:\Users\user\Desktop\程式\C sharp Practice\Class Practice\Class Practice\obj\Debug\Class Practice.pdb

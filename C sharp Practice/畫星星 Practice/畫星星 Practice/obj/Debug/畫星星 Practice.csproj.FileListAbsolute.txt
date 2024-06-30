@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\畫星星 Practice\畫星星 Practice\obj\Debug\畫星星 Practice.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\畫星星 Practice\畫星星 Practice\obj\Debug\畫星星_Practice.Form1.resources
+C:\Users\user\source\repos\畫星星 Practice\畫星星 Practice\obj\Debug\畫星星_Practice.Properties.Resources.resources
+C:\Users\user\source\repos\畫星星 Practice\畫星星 Practice\obj\Debug\畫星星 Practice.csproj.GenerateResource.cache
+C:\Users\user\source\repos\畫星星 Practice\畫星星 Practice\obj\Debug\畫星星 Practice.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\畫星星 Practice\畫星星 Practice\bin\Debug\畫星星 Practice.exe.config
+C:\Users\user\source\repos\畫星星 Practice\畫星星 Practice\bin\Debug\畫星星 Practice.exe
+C:\Users\user\source\repos\畫星星 Practice\畫星星 Practice\bin\Debug\畫星星 Practice.pdb
+C:\Users\user\source\repos\畫星星 Practice\畫星星 Practice\obj\Debug\畫星星 Practice.exe
+C:\Users\user\source\repos\畫星星 Practice\畫星星 Practice\obj\Debug\畫星星 Practice.pdb

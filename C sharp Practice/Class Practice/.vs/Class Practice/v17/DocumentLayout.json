@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\\u7A0B\u5F0F\\C sharp Practice\\Class Practice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{47F9990D-41AE-4B3A-AA13-27292F2BB70D}|Class Practice\\Class Practice.csproj|c:\\users\\user\\desktop\\\u7A0B\u5F0F\\c sharp practice\\class practice\\class practice\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F9990D-41AE-4B3A-AA13-27292F2BB70D}|Class Practice\\Class Practice.csproj|solutionrelative:class practice\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F9990D-41AE-4B3A-AA13-27292F2BB70D}|Class Practice\\Class Practice.csproj|C:\\Users\\user\\Desktop\\\u7A0B\u5F0F\\C sharp Practice\\Class Practice\\class practice\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F9990D-41AE-4B3A-AA13-27292F2BB70D}|Class Practice\\Class Practice.csproj|solutionrelative:class practice\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F9990D-41AE-4B3A-AA13-27292F2BB70D}|Class Practice\\Class Practice.csproj|c:\\users\\user\\desktop\\\u7A0B\u5F0F\\c sharp practice\\class practice\\class practice\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47F9990D-41AE-4B3A-AA13-27292F2BB70D}|Class Practice\\Class Practice.csproj|solutionrelative:class practice\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47F9990D-41AE-4B3A-AA13-27292F2BB70D}|Class Practice\\Class Practice.csproj|C:\\Users\\user\\Desktop\\\u7A0B\u5F0F\\C sharp Practice\\Class Practice\\class practice\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{47F9990D-41AE-4B3A-AA13-27292F2BB70D}|Class Practice\\Class Practice.csproj|solutionrelative:class practice\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Teacher.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\\u7A0B\u5F0F\\C sharp Practice\\Class Practice\\Class Practice\\Teacher.cs",
+              "RelativeDocumentMoniker": "Class Practice\\Teacher.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\\u7A0B\u5F0F\\C sharp Practice\\Class Practice\\Class Practice\\Teacher.cs",
+              "RelativeToolTip": "Class Practice\\Teacher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T08:13:38.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\\u7A0B\u5F0F\\C sharp Practice\\Class Practice\\Class Practice\\Form1.cs",
+              "RelativeDocumentMoniker": "Class Practice\\Form1.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\\u7A0B\u5F0F\\C sharp Practice\\Class Practice\\Class Practice\\Form1.cs",
+              "RelativeToolTip": "Class Practice\\Form1.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAiwCEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T17:18:15.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\\u7A0B\u5F0F\\C sharp Practice\\Class Practice\\Class Practice\\Student.cs",
+              "RelativeDocumentMoniker": "Class Practice\\Student.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\\u7A0B\u5F0F\\C sharp Practice\\Class Practice\\Class Practice\\Student.cs",
+              "RelativeToolTip": "Class Practice\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T16:52:55.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\\u7A0B\u5F0F\\C sharp Practice\\Class Practice\\Class Practice\\Form1.cs",
+              "RelativeDocumentMoniker": "Class Practice\\Form1.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\\u7A0B\u5F0F\\C sharp Practice\\Class Practice\\Class Practice\\Form1.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "Class Practice\\Form1.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T16:52:28.127Z",
+              "EditorCaption": " [\u8A2D\u8A08]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\bin\Debug\net8.0\九九乘法表練習.exe
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\bin\Debug\net8.0\九九乘法表練習.deps.json
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\bin\Debug\net8.0\九九乘法表練習.runtimeconfig.json
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\bin\Debug\net8.0\九九乘法表練習.dll
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\bin\Debug\net8.0\九九乘法表練習.pdb
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\obj\Debug\net8.0\九九乘法表練習.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\obj\Debug\net8.0\九九乘法表練習.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\obj\Debug\net8.0\九九乘法表練習.AssemblyInfo.cs
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\obj\Debug\net8.0\九九乘法表練習.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\obj\Debug\net8.0\九九乘法表練習.dll
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\obj\Debug\net8.0\refint\九九乘法表練習.dll
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\obj\Debug\net8.0\九九乘法表練習.pdb
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\obj\Debug\net8.0\九九乘法表練習.genruntimeconfig.cache
+C:\Users\user\Desktop\程式\C sharp Practice\九九乘法表練習\九九乘法表練習\obj\Debug\net8.0\ref\九九乘法表練習.dll

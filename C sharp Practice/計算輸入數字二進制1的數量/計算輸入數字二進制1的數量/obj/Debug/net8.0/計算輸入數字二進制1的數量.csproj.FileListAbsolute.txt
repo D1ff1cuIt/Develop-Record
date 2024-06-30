@@ -1,0 +1,18 @@
+C:\Users\user\source\repos\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\obj\Debug\net8.0\計算輸入數字二進制1的數量.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\obj\Debug\net8.0\計算輸入數字二進制1的數量.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\obj\Debug\net8.0\計算輸入數字二進制1的數量.AssemblyInfo.cs
+C:\Users\user\source\repos\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\obj\Debug\net8.0\計算輸入數字二進制1的數量.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\obj\Debug\net8.0\計算輸入數字二進制1的數量.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\obj\Debug\net8.0\計算輸入數字二進制1的數量.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\obj\Debug\net8.0\計算輸入數字二進制1的數量.AssemblyInfo.cs
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\obj\Debug\net8.0\計算輸入數字二進制1的數量.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\bin\Debug\net8.0\計算輸入數字二進制1的數量.exe
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\bin\Debug\net8.0\計算輸入數字二進制1的數量.deps.json
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\bin\Debug\net8.0\計算輸入數字二進制1的數量.runtimeconfig.json
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\bin\Debug\net8.0\計算輸入數字二進制1的數量.dll
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\bin\Debug\net8.0\計算輸入數字二進制1的數量.pdb
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\obj\Debug\net8.0\計算輸入數字二進制1的數量.dll
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\obj\Debug\net8.0\refint\計算輸入數字二進制1的數量.dll
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\obj\Debug\net8.0\計算輸入數字二進制1的數量.pdb
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\obj\Debug\net8.0\計算輸入數字二進制1的數量.genruntimeconfig.cache
+C:\Users\user\Desktop\程式\C sharp Practice\計算輸入數字二進制1的數量\計算輸入數字二進制1的數量\obj\Debug\net8.0\ref\計算輸入數字二進制1的數量.dll

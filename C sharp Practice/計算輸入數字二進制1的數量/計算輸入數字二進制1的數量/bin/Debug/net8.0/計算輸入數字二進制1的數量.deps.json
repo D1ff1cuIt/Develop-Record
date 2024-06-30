@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "計算輸入數字二進制1的數量/1.0.0": {
+        "runtime": {
+          "計算輸入數字二進制1的數量.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "計算輸入數字二進制1的數量/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
