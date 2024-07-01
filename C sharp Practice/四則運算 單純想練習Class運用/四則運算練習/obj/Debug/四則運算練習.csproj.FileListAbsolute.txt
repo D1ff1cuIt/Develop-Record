@@ -1,0 +1,10 @@
+C:\Users\user\Desktop\程式\C sharp Practice\四則運算練習\四則運算練習\bin\Debug\四則運算練習.exe.config
+C:\Users\user\Desktop\程式\C sharp Practice\四則運算練習\四則運算練習\bin\Debug\四則運算練習.exe
+C:\Users\user\Desktop\程式\C sharp Practice\四則運算練習\四則運算練習\bin\Debug\四則運算練習.pdb
+C:\Users\user\Desktop\程式\C sharp Practice\四則運算練習\四則運算練習\obj\Debug\四則運算練習.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\程式\C sharp Practice\四則運算練習\四則運算練習\obj\Debug\四則運算練習.Form1.resources
+C:\Users\user\Desktop\程式\C sharp Practice\四則運算練習\四則運算練習\obj\Debug\四則運算練習.Properties.Resources.resources
+C:\Users\user\Desktop\程式\C sharp Practice\四則運算練習\四則運算練習\obj\Debug\四則運算練習.csproj.GenerateResource.cache
+C:\Users\user\Desktop\程式\C sharp Practice\四則運算練習\四則運算練習\obj\Debug\四則運算練習.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\程式\C sharp Practice\四則運算練習\四則運算練習\obj\Debug\四則運算練習.exe
+C:\Users\user\Desktop\程式\C sharp Practice\四則運算練習\四則運算練習\obj\Debug\四則運算練習.pdb
